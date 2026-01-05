@@ -1,1 +1,39 @@
-<p>counter works!</p>
+<div class="card-wrapper min-h-screen flex flex-col bg-gray-200 p-4">
+  <div
+    class="welcome-card flex flex-col justify-center items-center p-6 gap-2 bg-gray-400 rounded-md"
+  >
+    <h1 class="font-sans font-bold text-blue-700 text-2xl text-center">Counter Component</h1>
+    <h3 class="font-sans font-semibold text-gray-700 text-xl text-center">Practicing Signals</h3>
+    <p class="font-sans font-normal text-gray-700 text-base text-center">
+      A signal holds a value and notifies all dependent computations whenever that value changes,
+      making it easier to build reactive applications without relying heavily on observables or
+      manual change detection.
+    </p>
+  </div>
+  <!--Counter-->
+  <div class="counter flex flex-col justify-center items-center gap-8 p-8 rounded-md my-4 bg-gray-300">
+    <h1 class="font-sans font-bold text-blue-700 text-4xl text-center">{{ count() }}</h1>
+    <div class="buttons flex justify-center gap-3">
+      <button
+        class="bg-green-700 py-1 px-2 rounded-sm font-sans text-white text-base text-center cursor-pointer hover:bg-green-800"
+        (click)="increment()"
+      >
+        Increment
+      </button>
+
+      <button
+        class="bg-red-700 py-1 px-2 rounded-sm font-sans text-white text-base text-center cursor-pointer hover:bg-red-800"
+        (click)="reset()"
+      >
+        Reset
+      </button>
+
+      <button
+        class="bg-gray-700 py-1 px-2 rounded-sm font-sans text-white text-base text-center cursor-pointer hover:bg-gray-800"
+        (click)="decrement()"
+      >
+        Decrement
+      </button>
+    </div>
+  </div>
+</div>
